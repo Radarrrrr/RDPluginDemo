@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C802C291E13C6A90003F027"
-               BuildableName = "RDPluginDemo.app"
-               BlueprintName = "RDPluginDemo"
-               ReferencedContainer = "container:RDPluginDemo.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C802C731E13CCCC0003F027"
-               BuildableName = "Aggregate_PluginOne"
-               BlueprintName = "Aggregate_PluginOne"
-               ReferencedContainer = "container:PluginProjects/PluginOne/PluginOne.xcodeproj">
+               BlueprintIdentifier = "0C802C5D1E13CB0C0003F027"
+               BuildableName = "PluginOne.framework"
+               BlueprintName = "PluginOne"
+               ReferencedContainer = "container:PluginOne.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -43,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C802C291E13C6A90003F027"
-            BuildableName = "RDPluginDemo.app"
-            BlueprintName = "RDPluginDemo"
-            ReferencedContainer = "container:RDPluginDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C802C291E13C6A90003F027"
-            BuildableName = "RDPluginDemo.app"
-            BlueprintName = "RDPluginDemo"
-            ReferencedContainer = "container:RDPluginDemo.xcodeproj">
+            BlueprintIdentifier = "0C802C5D1E13CB0C0003F027"
+            BuildableName = "PluginOne.framework"
+            BlueprintName = "PluginOne"
+            ReferencedContainer = "container:PluginOne.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -84,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0C802C291E13C6A90003F027"
-            BuildableName = "RDPluginDemo.app"
-            BlueprintName = "RDPluginDemo"
-            ReferencedContainer = "container:RDPluginDemo.xcodeproj">
+            BlueprintIdentifier = "0C802C5D1E13CB0C0003F027"
+            BuildableName = "PluginOne.framework"
+            BlueprintName = "PluginOne"
+            ReferencedContainer = "container:PluginOne.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -1,0 +1,6 @@
+framework module PluginOne {
+  umbrella header "PluginOne.h"
+
+  export *
+  module * { export * }
+}

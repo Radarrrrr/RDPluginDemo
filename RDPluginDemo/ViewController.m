@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <Dylib/Dylib.h>
 #import <MyFramework/MyFramework.h>
+#import <PluginOne/PluginOne.h>
 
 @interface ViewController ()
 
@@ -20,12 +21,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    //----
     Person *per = [[Person alloc] init];
     [per run];
     
+    //----
     [MyUtils runLibWith:@"我是一个嵌入的动态库" completion:^(NSString *status) {
         NSLog(@"status: %@", status);
     }];
+    
+    //----
+    [OnePrincipal run];
+    
+    
 }
 
 

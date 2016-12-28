@@ -18,7 +18,19 @@
 		0C802C501E13C90A0003F027 /* Dylib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C802C4B1E13C7C60003F027 /* Dylib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C802C521E13C90D0003F027 /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C802C4C1E13C7C60003F027 /* MyFramework.framework */; };
 		0C802C531E13C90D0003F027 /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C802C4C1E13C7C60003F027 /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C802C7D1E13CF960003F027 /* PluginOne.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C802C7A1E13CF5F0003F027 /* PluginOne.framework */; };
+		0C802C7E1E13CF960003F027 /* PluginOne.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C802C7A1E13CF5F0003F027 /* PluginOne.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0C802C6D1E13CB0D0003F027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C802C691E13CB0C0003F027 /* PluginOne.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0C802C5E1E13CB0C0003F027;
+			remoteInfo = PluginOne;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0C802C511E13C90A0003F027 /* Embed Frameworks */ = {
@@ -28,6 +40,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				0C802C501E13C90A0003F027 /* Dylib.framework in Embed Frameworks */,
+				0C802C7E1E13CF960003F027 /* PluginOne.framework in Embed Frameworks */,
 				0C802C531E13C90D0003F027 /* MyFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,6 +64,8 @@
 		0C802C471E13C7810003F027 /* PluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PluginProtocol.h; sourceTree = "<group>"; };
 		0C802C4B1E13C7C60003F027 /* Dylib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dylib.framework; sourceTree = "<group>"; };
 		0C802C4C1E13C7C60003F027 /* MyFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyFramework.framework; sourceTree = "<group>"; };
+		0C802C691E13CB0C0003F027 /* PluginOne.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PluginOne.xcodeproj; path = PluginOne/PluginOne.xcodeproj; sourceTree = "<group>"; };
+		0C802C7A1E13CF5F0003F027 /* PluginOne.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PluginOne.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C802C4F1E13C90A0003F027 /* Dylib.framework in Frameworks */,
+				0C802C7D1E13CF960003F027 /* PluginOne.framework in Frameworks */,
 				0C802C521E13C90D0003F027 /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +138,7 @@
 		0C802C481E13C7810003F027 /* PluginProjects */ = {
 			isa = PBXGroup;
 			children = (
+				0C802C691E13CB0C0003F027 /* PluginOne.xcodeproj */,
 			);
 			path = PluginProjects;
 			sourceTree = "<group>";
@@ -129,10 +146,19 @@
 		0C802C491E13C7810003F027 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				0C802C7A1E13CF5F0003F027 /* PluginOne.framework */,
 				0C802C4B1E13C7C60003F027 /* Dylib.framework */,
 				0C802C4C1E13C7C60003F027 /* MyFramework.framework */,
 			);
 			path = Plugins;
+			sourceTree = "<group>";
+		};
+		0C802C6A1E13CB0C0003F027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C802C6E1E13CB0D0003F027 /* PluginOne.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +209,28 @@
 			mainGroup = 0C802C211E13C6A90003F027;
 			productRefGroup = 0C802C2B1E13C6A90003F027 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0C802C6A1E13CB0C0003F027 /* Products */;
+					ProjectRef = 0C802C691E13CB0C0003F027 /* PluginOne.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				0C802C291E13C6A90003F027 /* RDPluginDemo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0C802C6E1E13CB0D0003F027 /* PluginOne.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PluginOne.framework;
+			remoteRef = 0C802C6D1E13CB0D0003F027 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0C802C281E13C6A90003F027 /* Resources */ = {
@@ -378,6 +420,7 @@
 				0C802C431E13C6A90003F027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
