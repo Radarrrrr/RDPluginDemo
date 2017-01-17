@@ -42,7 +42,7 @@
     
     
     //--------------------
-    NSObject *plugin = [PluginPlatformManager loadFramework:@"Plugin1.framework"];
+    NSObject *plugin = [PluginPlatformManager loadFramework:@"PluginOne.framework"];
     
     if(plugin && [plugin respondsToSelector:@selector(run)])
     {

@@ -6,36 +6,11 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		0C802C731E13CCCC0003F027 /* Aggregate_PluginOne */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 0C802C741E13CCCC0003F027 /* Build configuration list for PBXAggregateTarget "Aggregate_PluginOne" */;
-			buildPhases = (
-				0C802C791E13CCD80003F027 /* ShellScript */,
-			);
-			dependencies = (
-				0C802C781E13CCD60003F027 /* PBXTargetDependency */,
-			);
-			name = Aggregate_PluginOne;
-			productName = Aggregate_PluginOne;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		0C802C631E13CB0C0003F027 /* PluginOne.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C802C611E13CB0C0003F027 /* PluginOne.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C802C711E13CC380003F027 /* OnePrincipal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C802C6F1E13CC380003F027 /* OnePrincipal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C802C721E13CC380003F027 /* OnePrincipal.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C802C701E13CC380003F027 /* OnePrincipal.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0C802C771E13CCD60003F027 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0C802C551E13CB0C0003F027 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0C802C5D1E13CB0C0003F027;
-			remoteInfo = PluginOne;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0C802C5E1E13CB0C0003F027 /* PluginOne.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PluginOne.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +81,7 @@
 				0C802C5A1E13CB0C0003F027 /* Frameworks */,
 				0C802C5B1E13CB0C0003F027 /* Headers */,
 				0C802C5C1E13CB0C0003F027 /* Resources */,
+				0C1771001E2DCDD3002FC539 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,11 +106,6 @@
 						DevelopmentTeam = ZTW9XPA927;
 						ProvisioningStyle = Automatic;
 					};
-					0C802C731E13CCCC0003F027 = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = ZTW9XPA927;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 0C802C581E13CB0C0003F027 /* Build configuration list for PBXProject "PluginOne" */;
@@ -150,7 +121,6 @@
 			projectRoot = "";
 			targets = (
 				0C802C5D1E13CB0C0003F027 /* PluginOne */,
-				0C802C731E13CCCC0003F027 /* Aggregate_PluginOne */,
 			);
 		};
 /* End PBXProject section */
@@ -166,7 +136,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C802C791E13CCD80003F027 /* ShellScript */ = {
+		0C1771001E2DCDD3002FC539 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,7 +147,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/../../Plugins/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"";
+			shellScript = "FMK_NAME=${PROJECT_NAME}\n\nINSTALL_DIR=${SRCROOT}/../../Plugins/${FMK_NAME}.framework\n\nFRAMEWORK_DIR=${BUILT_PRODUCTS_DIR}/${FMK_NAME}.framework\n\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${FRAMEWORK_DIR}/\" \"${INSTALL_DIR}/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -191,14 +161,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0C802C781E13CCD60003F027 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0C802C5D1E13CB0C0003F027 /* PluginOne */;
-			targetProxy = 0C802C771E13CCD60003F027 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0C802C641E13CB0C0003F027 /* Debug */ = {
@@ -338,22 +300,6 @@
 			};
 			name = Release;
 		};
-		0C802C751E13CCCC0003F027 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = ZTW9XPA927;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		0C802C761E13CCCC0003F027 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = ZTW9XPA927;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -373,14 +319,7 @@
 				0C802C681E13CB0C0003F027 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		0C802C741E13CCCC0003F027 /* Build configuration list for PBXAggregateTarget "Aggregate_PluginOne" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0C802C751E13CCCC0003F027 /* Debug */,
-				0C802C761E13CCCC0003F027 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

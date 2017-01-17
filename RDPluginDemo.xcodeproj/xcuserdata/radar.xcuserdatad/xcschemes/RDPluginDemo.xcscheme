@@ -20,20 +20,6 @@
                ReferencedContainer = "container:RDPluginDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0C802C731E13CCCC0003F027"
-               BuildableName = "Aggregate_PluginOne"
-               BlueprintName = "Aggregate_PluginOne"
-               ReferencedContainer = "container:PluginProjects/PluginOne/PluginOne.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
