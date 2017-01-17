@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C1771031E2DD1C1002FC539 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0C1771021E2DD1C1002FC539 /* Readme.txt */; };
 		0C802C2F1E13C6A90003F027 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C802C2E1E13C6A90003F027 /* main.m */; };
 		0C802C321E13C6A90003F027 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C802C311E13C6A90003F027 /* AppDelegate.m */; };
 		0C802C351E13C6A90003F027 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C802C341E13C6A90003F027 /* ViewController.m */; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C1771021E2DD1C1002FC539 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		0C802C2A1E13C6A90003F027 /* RDPluginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDPluginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C802C2E1E13C6A90003F027 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C802C301E13C6A90003F027 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		0C802C211E13C6A90003F027 = {
 			isa = PBXGroup;
 			children = (
+				0C1771021E2DD1C1002FC539 /* Readme.txt */,
 				0C802C2C1E13C6A90003F027 /* RDPluginDemo */,
 				0C802C441E13C7810003F027 /* PluginPlatform */,
 				0C802C481E13C7810003F027 /* PluginProjects */,
@@ -239,6 +242,7 @@
 			files = (
 				0C802C3D1E13C6A90003F027 /* LaunchScreen.storyboard in Resources */,
 				0C802C3A1E13C6A90003F027 /* Assets.xcassets in Resources */,
+				0C1771031E2DD1C1002FC539 /* Readme.txt in Resources */,
 				0C802C381E13C6A90003F027 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
